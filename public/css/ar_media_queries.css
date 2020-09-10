@@ -1,0 +1,243 @@
+/*Smartphones*/
+@media only screen and (max-width: 768px) {
+    .social_icons{
+        font-size: 100%;
+    }
+    .slider {
+        background-image: url("../../img/ar_slider_img_sm.jpg");
+        margin-top: 100px;
+        padding: 30% 2% 2% 30%;
+        background-size: cover;
+        background-position: center top;
+    }
+    .slider .contentText {
+        font-size: 60%;
+    }
+    .open li {
+        display: block;
+        text-align: right;
+        width: 100%;
+    }
+    .open li {
+        display: block;
+        text-align: right;
+        width: 100%;
+    }
+    .info p{
+        font-size: 110%;
+        line-height: 1.2em;
+    }
+    .owl-nav{
+        display: none;
+    }
+    .fancybox-content{
+        height: 30%;
+    }
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .info p {
+        font-size: 103%;
+        line-height: 1.2em;
+    }
+    .carousel-control-prev, .carousel-control-next{
+        display: none;
+    }
+    .scrollPanel{
+        width: 95%;
+        padding-left: 20px;
+    }
+    .nav-link {
+        padding: 0rem 1rem;
+    }
+    .open li{
+        display: block;
+        text-align: left;
+    }
+    .page-section {
+        padding: 10px;
+    }
+    .page-section .scrollPanel{
+        width: 90%;
+        padding-left: 20px;
+    }
+    .toggle-menu {
+        right: 27px;
+    }
+    .fancybox-content{
+        height: 30%;
+    }
+
+}
+
+
+/* iPads (portrait and landscape) ----------- */
+/*@media only screen and (min-device-width : 1024px) and (max-device-width : 768px) {*/
+@media only screen
+and (min-device-width: 1024px)
+and (max-device-width: 768px)
+and (-webkit-min-device-pixel-ratio: 1){
+    .info{
+        line-height: 0.8em;
+    }
+
+    .info p{
+        font-size: 62%;
+        line-height: 1.8em;
+    }
+    .owl-nav{
+        display: none;
+    }
+    .page-section {
+        padding: 50px 0px 100px 0px;
+    }
+    .outerWrap {
+        height: 300px;
+    }
+    .info span {
+        border: 1px #ffffff solid;
+        padding: 2px 8px;
+        font-size: 65%;
+    }
+    .carousel-control-prev, .carousel-control-next{
+        display: none;
+    }
+    .slider {
+        background-image: url("../../img/ar_slider_img_sm.jpg");
+        margin-top: 80px;
+        padding: 30% 2% 2% 30%;
+        background-size: cover;
+        background-position: center top;
+    }
+    .slider .contentText {
+        font-size: 125%;
+    }
+    .nav-link{
+        font-size: 80%;
+        padding: .1rem 0.5rem;
+    }
+    .fancybox-content{
+        height: 30%;
+    }
+
+}
+
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+    .nav-link {
+        display: block;
+        padding: .5rem 0.5rem;
+    }
+}
+
+/* iPhone 5 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+    .slider{
+        background-size: contain;
+    }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+    .carousel-control-prev, .carousel-control-next{
+        display: none;
+    }
+    .scrollPanel{
+        width: 95%;
+        padding-left: 20px;
+    }
+    .nav-link {
+        padding: 0rem 1rem;
+    }
+    .open li{
+        display: block;
+        text-align: left;
+    }
+    .page-section {
+        padding: 10px;
+    }
+    .page-section .scrollPanel{
+        width: 90%;
+        padding-left: 20px;
+    }
+    .toggle-menu {
+        right: 27px;
+    }
+}
+
+/* iPhone X ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+    .carousel-control-prev, .carousel-control-next{
+        display: none;
+    }
+    .scrollPanel{
+        width: 95%;
+        padding-left: 20px;
+    }
+    .nav-link {
+        padding: 0rem 1rem;
+    }
+    .open li{
+        display: block;
+        text-align: left;
+    }
+    .page-section {
+        padding: 10px;
+    }
+    .page-section .scrollPanel{
+        width: 90%;
+        padding-left: 20px;
+    }
+    .toggle-menu {
+        right: 27px;
+    }
+    .fancybox-content{
+        height: 30%;
+    }
+}
+
+/* Samsung Galaxy S4 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+    .carousel-control-prev, .carousel-control-next{
+        display: none;
+    }
+    .scrollPanel{
+        width: 95%;
+        padding-left: 20px;
+    }
+    .nav-link {
+        padding: 0rem 1rem;
+    }
+    .open li{
+        display: block;
+        text-align: left;
+    }
+    .page-section {
+        padding: 10px;
+    }
+    .page-section .scrollPanel{
+        width: 90%;
+        padding-left: 20px;
+    }
+    .toggle-menu {
+        right: 27px;
+    }
+    .fancybox-content{
+        height: 30%;
+    }
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 280px) and (max-device-width : 653px) {
+    .slider {
+        background-image: url("../../img/ar_slider_img_sm.jpg");
+        margin-top: 100px;
+        padding: 30% 2% 2% 30%;
+        background-size: cover;
+        background-position: center top;
+    }
+}

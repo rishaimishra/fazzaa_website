@@ -1,0 +1,256 @@
+/*Smartphones*/
+@media only screen and (max-width: 800px) {
+    .slider {
+        background-size: contain;
+    }
+    .open li {
+        display: inline-block;
+        text-align: left;
+        width: 100%;
+    }
+    .menu-drawer li{
+        margin: 0px;
+    }
+    .nav-link {
+        display: block;
+        padding: .3rem 0.5rem;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .social_icons{
+        font-size: 100%;
+    }
+    .slider {
+        background-image: url("../../img/slider_img_sm.jpg");
+        margin-top: 100px;
+        padding: 30% 2% 2% 2%;
+        background-size: cover;
+        background-position: center top;
+    }
+    .slider .contentText {
+        font-size: 60%;
+    }
+    .page-section .icons li img{
+        width: 80%;
+    }
+    .page-section .icons li h5 {
+        font-size: 80%;
+    }
+    .open li {
+        display: inline-block;
+        text-align: left;
+        width: 100%;
+    }
+    .info p{
+        font-size: 170%;
+        line-height: 1.2em;
+    }
+    .owl-nav{
+        display: none;
+    }
+    .nav-link{
+        font-size: 80%;
+        padding: 0rem 0.3rem;
+    }
+    .menu-drawer li{
+        margin-bottom: 5px;
+    }
+    .newslink h4{
+        font-size: 195%;
+    }
+    .info p {
+        font-size: 98%;
+    }
+    .page-section{
+        margin-bottom: 20px;
+    }
+    .card-header h6{
+        font-size: 110%;
+    }
+    .fancybox-content {
+        height: 31%;
+    }
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .carousel-control-prev, .carousel-control-next{
+        display: none;
+    }
+    .scrollPanel{
+        width: 95%;
+        padding-left: 20px;
+    }
+    .nav-link {
+        padding: 0rem 1rem;
+    }
+    .open li{
+        display: block;
+        text-align: left;
+    }
+    .page-section {
+        padding: 10px;
+    }
+    .page-section .scrollPanel{
+        width: 90%;
+        padding-left: 20px;
+    }
+    .toggle-menu {
+        right: 27px;
+    }
+    .info p {
+        font-size: 118%;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+/*@media only screen and (min-device-width : 1024px) and (max-device-width : 768px) {*/
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (-webkit-min-device-pixel-ratio: 1){
+    .page-section {
+        padding: 50px 0px 100px 0px;
+    }
+    .outerWrap {
+        height: 300px;
+    }
+    .info span {
+        border: 1px #ffffff solid;
+        padding: 2px 8px;
+    }
+    .carousel-control-prev, .carousel-control-next{
+        display: none;
+    }
+    .slider {
+        background-image: url("../../img/slider_img_sm.jpg");
+        margin-top: 80px;
+        padding: 30% 2% 2% 2%;
+        background-size: cover;
+        background-position: center top;
+    }
+    .slider .contentText {
+        font-size: 125%;
+    }
+    .newslink h4{
+        font-size: 150%;
+    }
+    .menu-drawer li{
+        font-size: 80%;
+    }
+    .nav-link {
+        padding: .5rem 0.3rem;
+    }
+    .owl-nav{
+        display: none;
+    }
+    .info {
+        font-size: 84%;
+        line-height: 1.1em;
+    }
+    .fancybox-content {
+        height: 50%;
+    }
+}
+
+/* iPhone 6, 7, 8 ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+    /* Styles */
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+
+    .info p {
+        font-size: 118%;
+    }
+    .carousel-control-prev, .carousel-control-next{
+        display: none;
+    }
+    .scrollPanel{
+        width: 95%;
+        padding-left: 20px;
+    }
+    .nav-link {
+        padding: 0rem 1rem;
+    }
+    .open li{
+        display: block;
+        text-align: left;
+    }
+    .page-section {
+        padding: 10px;
+    }
+    .page-section .scrollPanel{
+        width: 90%;
+        padding-left: 20px;
+    }
+    .toggle-menu {
+        right: 27px;
+    }
+}
+
+/* iPhone X ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+    .carousel-control-prev, .carousel-control-next{
+        display: none;
+    }
+    .scrollPanel{
+        width: 95%;
+        padding-left: 20px;
+    }
+    .nav-link {
+        padding: 0rem 1rem;
+    }
+    .open li{
+        display: block;
+        text-align: left;
+    }
+    .page-section {
+        padding: 10px;
+    }
+    .page-section .scrollPanel{
+        width: 90%;
+        padding-left: 20px;
+    }
+    .toggle-menu {
+        right: 27px;
+    }
+    .fancybox-content{
+        height: 30%;
+    }
+
+
+}
+
+/* Samsung Galaxy S4 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+    .carousel-control-prev, .carousel-control-next{
+        display: none;
+    }
+    .scrollPanel{
+        width: 95%;
+        padding-left: 20px;
+    }
+    .nav-link {
+        padding: 0rem 1rem;
+    }
+    .open li{
+        display: block;
+        text-align: left;
+    }
+    .page-section {
+        padding: 10px;
+    }
+    .page-section .scrollPanel{
+        width: 90%;
+        padding-left: 20px;
+    }
+    .toggle-menu {
+        right: 27px;
+    }
+    .fancybox-content{
+        height: 30%;
+    }
+}

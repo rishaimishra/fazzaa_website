@@ -1,0 +1,588 @@
+@font-face {
+    font-family: 'GE SS Two Medium';
+    src: url('../../fonts/GESSTwoMedium-Medium.woff2') format('woff2'),
+    url('../../assets/fonts/GESSTwoMedium-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'GE SS Two Bold';
+    src: url('../../fonts/GESSTwoBold-Bold.woff2') format('woff2'),
+    url('../../assets/fonts/GESSTwoBold-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'GE SS Two Light';
+    src: url('../../fonts/GESSTwoLight-Light.woff2') format('woff2'),
+    url('../../assets/fonts/GESSTwoLight-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Remove padding and margin */
+*
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+button:focus {outline:0;}
+
+html{
+    scroll-behavior: smooth;
+
+}
+body
+{
+    font-family: 'GE SS Two Light';
+    font-size: 100%;
+    color: #555555;
+    text-align:center;
+    position: relative;
+    height: 100%;
+}
+a:hover{
+    text-decoration:none;
+}
+h2{
+    font-family: Montserrat;
+    font-weight: bold;
+}
+/* Header */
+.navbar{
+    background-color: #FFFFFF;
+}
+.toggle-menu {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  right: 0;
+  top: 10px;
+  z-index: 1000;
+  position: absolute;
+}
+
+.toggle-menu i {
+  position: absolute;
+  display: block;
+  height: 2px;
+  background: #35332F;
+  width: 30px;
+  left: 0px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.toggle-menu i:nth-child(1) {
+  top: 16px;
+}
+
+.toggle-menu i:nth-child(2) {
+  top: 24px;
+}
+
+.toggle-menu i:nth-child(3) {
+  top: 32px;
+}
+
+.toggle-menu.active i:nth-child(1) {
+  top: 25px;
+  -webkit-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+}
+
+.toggle-menu.active i:nth-child(2) {
+  background: transparent;
+}
+
+.toggle-menu.active i:nth-child(3) {
+  top: 25px;
+  -webkit-transform: rotateZ(-45deg);
+  transform: rotateZ(-45deg);
+}
+
+.menu-drawer {
+  top: 0;
+  padding:0px 60px 0px 0px;
+  text-align: right;
+}
+
+.open {
+  right: 0px;
+  transition: right linear .2s;
+}
+.menu-drawer li {
+    float: right;
+    font-family: 'GE SS Two Medium';
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-size: 100%;
+    text-align: right;
+    display: none;
+    visibility:hidden;
+    opacity:0;
+    filter:alpha(opacity=0);
+    -webkit-transition:200ms ease;
+    -moz-transition:200ms ease;
+    -o-transition:200ms ease;
+    transition:200ms ease;
+}
+.open li{
+    display: inline-block;
+    visibility:visible;
+    opacity:1;
+    filter:alpha(opacity=100);
+}
+/*.menu-drawer ul{*/
+    /*padding-right: 5%;*/
+/*}*/
+.menu-drawer li a {
+  text-decoration: none;
+  color: #000000;
+}
+.menu-drawer li a:hover {
+  color: #aa874b;
+}
+.menu-drawer li a.active{
+    color: #aa874b;
+    border-bottom: 1px solid #aa874b;
+}
+.navbar{
+    -webkit-box-shadow: 2px 7px 11px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 7px 11px -6px rgba(0,0,0,0.75);
+    box-shadow: 2px 7px 11px -6px rgba(0,0,0,0.75);
+}
+.navbar-collapse{
+    flex-basis: inherit !important;
+}
+.menu-drawer.navbar-shrink {
+    padding: 0px 30px 0px 0px;
+}
+/*Sticky Social Icons*/
+.social_icons {
+    position: fixed;
+    top: 350px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transform: translateY(-50%);
+    font-size: 120%;
+}
+.social_icons li{
+    list-style:none;
+    margin: 5px;
+    transition: all 0.5s ease;
+}
+.social_icons a{
+    display: block;
+    padding:5px 10px;
+    color: #ffffff;
+    font-size: 100%;
+}
+.social_icons a:hover{
+    color: #000000;
+    background-color: #ffffff;
+}
+/*slider*/
+.slider{
+    background-image: url("../../img/ar_slider_img.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    min-height: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 100px;
+    padding: 450px 60px 50px 0px;
+}
+.slider .contentText{
+    font-family: 'GE SS Two Bold';
+    font-size: 180%;
+    line-height: 1.5em;
+    text-shadow: 1px 2px 3px #000000;
+    color: #ffffff;
+    text-align: right;
+}
+/*Content*/
+.page-section{
+    padding:60px 0px 200px 0px;
+    direction: ltr;
+}
+#about.page-section p, #rewards.page-section p{
+    font-family: 'GE SS Two Medium';
+    line-height: 1.3em;
+    text-align: right;
+    font-size: 110%;
+}
+.page-section h1{
+    font-family: 'GE SS Two Medium';
+    font-size: 250%;
+    font-weight:700;
+    margin-bottom: 40px;
+    color: #000000;
+    text-transform: uppercase;
+    text-align: right;
+}
+#about{
+    background:url("../../img/arw_about.svg") no-repeat bottom;
+    background-size: contain;
+}
+.page-section .scrollPanel{
+    text-align: left;
+    height: 400px;
+    overflow-y: auto;
+    padding-right: 40px;
+}
+.eng_font{
+    font-family: Verdana;
+}
+/*ScrollBar*/
+/* width */
+.scrollPanel::-webkit-scrollbar {
+    width: 8px;
+}
+/* Track */
+.scrollPanel::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+/* Handle */
+#about .scrollPanel::-webkit-scrollbar-thumb {
+    background: #8bccdf;
+}
+/* Handle on hover */
+.scrollPanel::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.page-section .icons{
+    display: block;
+    margin: 0px auto;
+}
+.page-section .icons li{
+    width: 20%;
+    display: inline-block;
+    margin: 20px 15px;
+    text-align: center;
+    line-height: 1.2em;
+    direction: rtl;
+}
+.page-section .icons li img{
+    width: 50%;
+    margin-bottom: 10px;
+}
+.page-section .icons h5{
+    font-size: 80%;
+}
+#rewards{
+    background:url("../../img/arw_reward.svg") no-repeat bottom;
+    background-size: contain;
+}
+#rewards .ques{
+    font-family: 'GE SS Two Medium';
+    color: #000000;
+    margin-bottom: 0.5em;
+}
+#rewards .ans{
+    font-family: 'GE SS Two Light';
+    margin-bottom: 40px;
+}
+#rewards .scrollPanel::-webkit-scrollbar-thumb {
+    background: #b99bbe;
+}
+.outerWrap{
+    position: relative;
+    z-index: 0;
+    display:table;
+    width:100%;
+    height:100%;
+}
+.imageBox{
+    height: auto !important;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.info {
+    font-family: 'GE SS Two Light';
+    line-height: 1.2em;
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    margin: 25px;
+    padding: 10px;
+    background: rgba(151,214,213, 0.5);
+    text-align: right;
+    color: #ffffff;
+    transition: all .3s linear;
+}
+.info a{
+    color: #ffffff;
+    display: block;
+}
+.info:hover { background: none; }
+.outerCover h5{
+    font-weight: bold;
+    font-size: 120%;
+    color: #a8844c;
+    margin-top: 10px;
+}
+
+.info span{
+    border: 1px #ffffff solid;
+    padding: 2px 8px;
+    font-size: 90%;
+}
+.fancybox-content{
+    width: 90%;
+    height: auto;
+    margin: 0px auto;
+    height: 80%;
+}
+.fancybox-content p{
+    font-size: 110%;
+    text-align: right;
+}
+.fancybox-content h2{
+    font-family: 'Myriad Pro Cond';
+    color: #a8844c !important;
+}
+#initiatives{
+    background: url("../../img/arw_intiatives.svg") no-repeat bottom;
+    background-size: contain;
+}
+#initiatives .owl-carousel .owl-nav button.owl-prev, #initiatives .owl-carousel .owl-nav button.owl-next{
+    position: absolute;
+    color: #a7d4e9;
+    border: 2px #a7d4e9 solid;
+    font-family: Verdana;
+    font-size: 120%;
+    padding: 0px 17px !important;
+}
+
+#partners{
+    background: url("../../img/arw_partner.svg") no-repeat bottom;
+    background-size: contain;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 55px;
+    width: 55px;
+    background-size: 100%, 100%;
+    border: 2px solid #a7d4e9;
+    background-image: none;
+}
+.carousel-control-next-icon:after
+{
+    content: '\203A';
+
+    font-size: 55px;
+    color: #a7d4e9;
+    display: block;
+    position: absolute;
+    top: 75px;
+    left: 75px;
+}
+.carousel-control-prev-icon:after {
+    content: '\2039';
+    font-size: 55px;
+    color: #a7d4e9;
+    display: block;
+    position: absolute;
+    top: 75px;
+    left: 75px;
+}
+.carousel-control-prev {
+    left: -100px;
+}
+.carousel-control-next {
+    right: -100px;
+}
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: #d8e7ee;
+    bottom: -55px;
+}
+.carousel-indicators .active {
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    background-color: #a7d4e9;
+}
+#media{
+    background: url("../../img/arw_media.svg") no-repeat bottom;
+    background-size: contain;
+}
+.newslink img{
+    -webkit-filter: grayscale(100%) !important;
+    filter: grayscale(100%) !important;
+    transition: all .3s linear;
+}
+.newslink img:hover{
+    -webkit-filter: grayscale(0) !important;
+    filter: grayscale(0) !important;
+}
+.newslink h4{
+    font-family: 'GE SS Two Medium';
+    font-size: 150%;
+    display: block;
+    padding: 10px;
+    margin-top: 15px;
+    color: #000000;
+}
+.newslink:hover h4{
+    background: #f4b46f;
+    color: #ffffff;
+}
+#media .owl-nav, #initiatives .owl-nav{
+    position: absolute;
+    top:30%;
+    width: 100%;
+}
+#media .owl-carousel .owl-nav button.owl-prev, #media .owl-carousel .owl-nav button.owl-next{
+    position: absolute;
+    color: #f4b46f;
+    border: 2px #f4b46f solid;
+    font-family: Verdana;
+    font-size: 200%;
+    padding: 0px 17px !important;
+}
+.owl-carousel .owl-nav button.owl-prev{
+    left: -80px;
+}
+.owl-carousel .owl-nav button.owl-next{
+    right: -80px;
+    position: absolute;
+}
+.owl-theme .owl-nav [class*=owl-]:hover, .owl-theme .owl-nav [class*=owl-]:focus {
+    border: 2px solid #f4b46f !important;
+    color: #ffffff !important;
+    background: #f4b46f;
+    text-decoration: none;
+}
+.modalBox p{
+    text-align: right;
+}
+
+/*.owl-carousel button.owl-dot, .owl-carousel button.owl-dot.active {*/
+    /*background: #dee4e2;*/
+    /*padding: 5px !important;*/
+    /*border-radius: 50%;*/
+    /*margin: 5px;*/
+/*}*/
+/*.owl-carousel button.owl-dot.active {*/
+    /*background: #b1d9cf;.menu-drawer*/
+/*}*/
+#faq{
+     background: url("../../img/arw_faq.svg") no-repeat bottom;
+     background-size: contain;
+ }
+/*Accordion*/
+/* Horizontal line */
+.collapsible-link::before {
+    content: '';
+    width: 14px;
+    height: 2px;
+    background: #333;
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 1rem;
+    display: block;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+/* Vertical line */
+.collapsible-link::after {
+    content: '';
+    width: 2px;
+    height: 14px;
+    background: #333;
+    position: absolute;
+    top: calc(50% - 7px);
+    left: calc(1rem + 6px);
+    display: block;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+.collapsible-link[aria-expanded='true']::after {
+    transform: rotate(90deg) translateX(-1px);
+}
+.collapsible-link[aria-expanded='true']::before {
+    transform: rotate(180deg);
+}
+.bg-white{
+    background-color:#e1d3e2 !important;
+    text-align: right;
+}
+.card-header h6{
+    font-size: 110%;
+}
+.card-body{
+    text-transform: capitalize;
+    padding: .75rem 1.25rem;
+    background-color: #e1d3e2;
+    color: #ffffff;
+    text-align: right;
+}
+.card{
+    border: 4px solid #ffffff;
+    border-radius: 0rem;
+}
+a.text-dark:focus, a.text-dark:hover{
+    color: #333333;
+}
+.collapsible-link::before, .collapsible-link::after{
+    background: #ffffff;
+}
+.table-borderless td{
+    border: 0px;
+    text-align: left;
+}
+#contactUs{
+    background: url("../../img/arw_footer.svg") no-repeat bottom;
+    background-size: contain;
+}
+.form_tit{
+    font-family: 'GE SS Two Medium';
+    text-transform: uppercase;
+    font-weight: 800;
+    width: 30%;
+}
+.send_btn{
+    font-size: 110%;
+    font-weight: bold;
+    background-color: #edc55d;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+/* Footer*/
+
+.owl-drag.owl-carousel .owl-item {
+    min-width: 200px;
+}
+#contactUs p{
+    text-align: right;
+}
+.col-form-label{
+    font-size: 130%;
+    padding-top: 0px;
+    text-align: right;
+}

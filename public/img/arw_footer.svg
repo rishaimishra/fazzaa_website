@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 13.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 14948)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1200px" height="300px" viewBox="0 0 1200 300" enable-background="new 0 0 1200 300" xml:space="preserve">
+     <style>
+      path {
+  stroke-dasharray: 1300;
+  stroke-dashoffset: -1300;
+  -webkit-animation: strokeAnim 16s ease infinite;
+  animation: strokeAnim 13s ease infinite;
+         }
+
+path:first-child {
+         animation-direction: reverse;
+  display: none; }
+
+@-webkit-keyframes strokeAnim {
+  0% {
+    stroke-dashoffset: -1300;
+    opacity: 1; }
+  50% {
+    stroke-dashoffset: 1200;
+    opacity: 1; }
+  99% {
+    stroke-dashoffset: 1300; }
+  99.1% {
+    stroke-dashoffset: 1300;
+    opacity: 0; }
+  100% {
+    stroke-dashoffset: -1300;
+    opacity: 0; } }
+
+path:nth-child(1) {
+  -webkit-animation-delay: -3.2s;
+  animation-delay: -3.2s; }
+
+path:nth-child(2) {
+  -webkit-animation-delayy: 0.3s;
+  animation-delay: 0.3s; }
+
+path:nth-child(3) {
+  -webkit-animation-delayy: 0.45s;
+  animation-delay: 0.45s; }
+
+path:nth-child(4) {
+  -webkit-animation-delayy: 0.6s;
+  animation-delay: 0.6s; }
+
+path:nth-child(5) {
+  -webkit-animation-delayy: 0.75s;
+  animation-delay: 0.75s; }
+
+path:nth-child(6) {
+  -webkit-animation-delayy: 0.9s;
+  animation-delay: 0.9s; }
+
+path:nth-child(7) {
+  -webkit-animation-delayy: 1.05s;
+  animation-delay: 1.05s; }
+
+path:nth-child(8) {
+  -webkit-animation-delayy: 1.2s;
+  animation-delay: 1.2s; }
+
+path:nth-child(9) {
+  -webkit-animation-delayy: 1.35s;
+  animation-delay: 1.35s; }
+
+path:nth-child(10) {
+  -webkit-animation-delayy: 1.5s;
+  animation-delay: 1.5s; }
+
+path:nth-child(11) {
+  -webkit-animation-delayy: 1.65s;
+  animation-delay: 1.65s; }
+
+path:nth-child(12) {
+  -webkit-animation-delayy: 1.8s;
+  animation-delay: 1.8s; }
+
+path:nth-child(13) {
+  -webkit-animation-delayy: 1.95s;
+  animation-delay: 1.95s; }
+
+path:nth-child(14) {
+  -webkit-animation-delayy: 2.1s;
+  animation-delay: 2.1s; }
+
+path:nth-child(15) {
+  -webkit-animation-delayy: 2.25s;
+  animation-delay: 2.25s; }
+
+path:nth-child(16) {
+  -webkit-animation-delayy: 2.4s;
+  animation-delay: 2.4s; }
+
+path:nth-child(17) {
+  -webkit-animation-delayy: 2.55s;
+  animation-delay: 2.55s; }
+
+path:nth-child(18) {
+  -webkit-animation-delayy: 2.7s;
+  animation-delay: 2.7s; }
+
+path:nth-child(19) {
+  -webkit-animation-delayy: 2.85s;
+  animation-delay: 2.85s; }
+
+path:nth-child(20) {
+  -webkit-animation-delayy: 3s;
+  animation-delay: 3s; }
+
+
+    </style>
+<g>
+	<path fill="none" stroke="#FF8C00" stroke-miterlimit="10" d="M-172.701-78.065C19.776,178.491,215.67,278.175,380.218,313.023
+		c88.571,18.742,226.195,110.829,291.162,106.412c49.553-3.354,32.447-101.427,62.642-103.577
+		c152.418-25.414,522.364-164.343,528.372-463.276"/>
+	<path fill="none" stroke="#FF8C00" stroke-miterlimit="10" d="M-177.789-64.973C12.292,188.389,205.792,288.752,369.036,324.802
+		c158.866,35.041,244.48,112.862,315.227,107.777c9.761-1.643,65.232-107.349,76.608-109.941
+		c166.533-37.614,490.865-177.206,496.516-456.961"/>
+	<path fill="none" stroke="#FF8C00" stroke-miterlimit="10" d="M-182.895-51.404C7.785,202.814,201.923,303.023,365.57,338.732
+		c158.179,34.539,259.285,113.206,329.795,108.171c20.153-3.377,72.555-113.08,99.014-120.503
+		c173.36-48.792,452.735-187.71,457.9-447.156"/>
+	<path fill="none" stroke="#FF8C00" stroke-miterlimit="10" d="M-187.983-38.313c175.329,233.705,353.491,337.221,508.267,380.151
+		c176.288,48.96,311.528,123.666,387.964,118.149c29.519-4.919,77.814-118.536,119.502-132.336
+		c173.227-57.378,414.611-194.392,419.527-435.371"/>
+	<path fill="none" stroke="#FF8C00" stroke-miterlimit="10" d="M-193.035-26.052C4.163,236.767,204.999,334.977,372.007,367.479
+		c150.658,29.354,267.788,107.458,335.843,102.627c36.898-6.179,92.503-121.237,146.734-141.337
+		c169.506-63.009,383.055-197.663,387.635-424.17"/>
+	<path fill="none" stroke="#FF8C00" stroke-miterlimit="10" d="M-197.307-13.704C-4.08,243.895,192.687,343.373,357.647,377.82
+		c155.185,32.455,281.95,106.172,351.511,101.16c43.478-7.23,104.924-122.477,170.216-149.235
+		c163.837-67.167,354.184-199.099,358.496-412.799"/>
+	<path fill="none" stroke="#FF8C00" stroke-miterlimit="10" d="M-209.901,57.984C-49.513,230.662,150.228,310.707,270.84,344.361
+		c259.08,72.368,338.522,148.812,432.98,142.037c35.696,16.308,170.812-140.271,211.041-159.012
+		c32.117-14.95,62.529-32.646,93.73-52.401c101.374-64.261,216.98-173.682,220.197-331.574"/>
+	<path fill="none" stroke="#FF8C00" stroke-miterlimit="10" d="M-212.92,68.595c160.389,172.678,360.128,252.722,480.743,286.378
+		c259.08,72.366,334.531,147.998,428.992,141.225c35.696,16.308,174.801-139.457,215.026-158.2
+		c32.117-14.949,62.531-32.646,93.733-52.4c101.372-64.262,217.052-173.621,220.193-331.514"/>
+	<path fill="none" stroke="#FF8C00" stroke-miterlimit="10" d="M-215.626,79.339c160.385,172.674,360.125,252.72,480.741,286.376
+		c259.08,72.366,337.239,137.255,431.7,130.481c35.696,16.308,172.092-128.713,212.318-147.458
+		c32.117-14.949,62.529-32.648,93.733-52.402c101.372-64.261,216.976-173.68,220.195-331.572"/>
+	<path fill="none" stroke="#FF8C00" stroke-miterlimit="10" d="M-218.727,89.946c160.388,172.676,360.127,252.72,480.744,286.378
+		c259.08,72.365,336.656,134.071,431.116,127.298c35.696,16.306,172.677-125.531,212.902-144.275
+		c32.118-14.95,62.531-32.648,93.733-52.4c101.371-64.262,216.978-173.682,220.195-331.574"/>
+	<path fill="none" stroke="#FF8C00" stroke-miterlimit="10" d="M-222.287,100.355c160.385,172.676,360.125,252.72,480.74,286.378
+		c259.081,72.367,341.575,131.285,436.034,124.511c35.695,16.31,167.758-122.744,207.985-141.488
+		c32.117-14.947,62.532-32.646,93.732-52.401c101.375-64.26,216.977-173.679,220.195-331.573"/>
+	<path fill="none" stroke="#FF8C00" stroke-miterlimit="10" d="M-225.384,110.963c160.385,172.675,360.125,252.72,480.741,286.377
+		c259.081,72.368,342.673,129.424,437.133,122.648c35.695,16.308,166.658-120.881,206.885-139.626
+		c32.118-14.947,62.532-32.646,93.733-52.4c101.375-64.26,216.977-173.679,220.195-331.572"/>
+</g>
+</svg>
