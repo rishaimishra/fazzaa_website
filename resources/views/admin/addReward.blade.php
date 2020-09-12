@@ -25,7 +25,7 @@
 		<div class="row">
 			<div class="col-12">
 				<div class="page-title-box">
-					<h4 class="page-title">Add Rewards</h4>
+					<h4 class="page-title">Add Reward</h4>
 				</div>
 			</div>
 		</div>
