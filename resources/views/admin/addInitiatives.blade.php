@@ -45,7 +45,7 @@
                                     <div class="card-body">
 
 
-											<form method="post" >
+                                    <form method="post" action="{{route('panel.store')}}">
 												@csrf
 											<div class="form-group">
 											    <label>Language</label>

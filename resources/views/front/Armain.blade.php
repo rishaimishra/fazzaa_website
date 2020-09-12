@@ -103,24 +103,16 @@
         <div class="row">
             <div class="col-md-12 scrollPanel">
                 <div class="row"  dir="rtl">
-<!--Ques1-->
-<p class="ques">ماذا أستفيد عند التسجيل في البرنامج الوطني للمكافآت السلوكية – فزعه؟ </p>
-<p class="ans">البرنامج الوطني للمكافآت السلوكية هو برنامج مكافآت يهدف إلى خلق مواطنين فعّالين من خلال تشجعيهم على تبنّي سلوك إيجابي للإرتقاء بالمجتمع الإماراتي ككلّ. </p>
-<!--Ques2-->
-<p class="ques">ماذا أستفيد من تبنّي حياة صحية؟</p>
-<p class="ans">تبنّي حياة صحية وممارسة الرياضة يساعد على بناء مواطن نشط وحيوي، يعتمد على نمط حياة صحي من أجل سلامته.</p>
-<!--Ques3-->
-<p class="ques">ماذا أستفيد من تبنّي تغذية صحية؟</p>
-<p class="ans">يساعد إتّباع تغذية صحية وخيارات أكل ذكية في المحافظة على الصحة واللياقة، ويقلّل من مخاطر الأمراض.</p>
-<!--Ques4-->
-<p class="ques">ماذا أستفيد من التطوّع؟</p>
-<p class="ans">العمل التطوعي يهدف إلى ردّ الجميل للمجتمع، مما يولّد ترابط إجتماعي قوي حيث يلعب كل شخص دوراً مهماً فيه.</p>
-<!--Ques5-->
- <p class="ques">ماذا أستفيد من الإلتزام بالقوانين والتشريعات؟</p>
-<p class="ans"> مصلحة الوطن تبدأ من الإمتثال للقوانين والتشريعات. هذا يساعد على ضمان بيئة آمنة وسالمة يعيش فيها كل فرد بسلام.</p>
-<!--Ques6-->
-<p class="ques">ماذا أستفيد من إقتصاد المعرفة والتمكين؟</p>
-<p class="ans">تبدأ تنمية المواطن من المعرفة والتعليم، حيث تمكّنه من الريادة في مختلف المجالات المتاحة للوصول إلى إقتصاد تقدّمي.</p>
+
+                    @if(isset($rows))
+                    @foreach($rows as $row)
+                    @if($row->lang == "ar")
+                    <p class="ques">{{$row->title}}</p>
+
+                    <p class="ans">{!! $row->description !!}</p>
+                    @endif
+                    @endforeach
+                    @endif
 
                 </div>
             </div>
@@ -327,186 +319,29 @@
                 <!-- Accordion -->
                 <div id="accordionExample" class="accordion shadow">
 
+
+                    @if(isset($faq))
+                    @foreach($faq as $rows)
+                    @if($row->lang == "ar")
+
                     <!-- Accordion item 1 -->
                     <div class="card">
                         <div id="headingOne" class="card-header bg-white shadow-sm border-0">
-                            <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="d-block position-relative text-dark collapsible-link py-2">ماهي شروط التسجيل في عضوية البرنامج؟ </a></h6>
+                            <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="d-block position-relative text-dark collapsible-link py-2">{{$rows->title}}</a></h6>
                         </div>
                         <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse show">
                             <div class="card-body">
-                                <p class="font-weight-light m-0">بإمكان أعضاء مجموعة فزعه الإنضمام لعضوية البرنامج في المرحلة الأولى منه. وبإمكان أفراد المجتمع التسجيل للحصول على العضوية في المراحل اللاحقة من البرنامج.</p>
+                                <p class="font-weight-light m-0">{!! $rows->description !!}</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Accordion item 2 -->
-                    <div class="card">
-                        <div id="headingTwo" class="card-header bg-white shadow-sm border-0">
-                            <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="d-block position-relative collapsed text-dark collapsible-link py-2">كيفية التسجيل في البرنامج ؟ </a></h6>
-                        </div>
-                        <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse">
-                            <div class="card-body">
-                                <p class="font-weight-light m-0">من  “Fazaa Rewards” عن طريق تحميل تطبيق الهاتف
-                                    Google Play و App Store ثم قم بتسجيل الدخول عبر ادخال رقم عضوية فزعه الخاص بك.</p>
-                            </div>
-                        </div>
-                    </div>
+                    @endif
+                    @endforeach
+                    @endif
 
-                    <!-- Accordion item 3 -->
-                    <div class="card">
-                        <div id="headingThree" class="card-header bg-white shadow-sm border-0">
-                            <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" class="d-block position-relative collapsed text-dark collapsible-link py-2">ماهي آلية تجميع النقاط؟</a></h6>
-                        </div>
-                        <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
-                            <div class="card-body">
-                                <p class="font-weight-light m-0">يتوجب على  المشارك اختيار الأهداف المراد تحقيقها. بعد تحقيق الهدف وإتمام الإنجاز يقوم البرنامج بمكافئة المشارك بنقاط.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Accordion item 4 -->
-                    <div class="card">
-                        <div id="headingFour" class="card-header bg-white shadow-sm border-0">
-                            <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" class="d-block position-relative collapsed text-dark collapsible-link py-2">أين يمكنني صرف النقاط؟</a></h6>
-                        </div>
-                        <div id="collapseFour" aria-labelledby="headingFour" data-parent="#accordionExample" class="collapse">
-                            <div class="card-body">
-                                <p class="font-weight-light m-0">يمكنك استبدال النقاط المكتسبة بما يعادلها من كوبونات في السوق الافتراضي.</div>
-                        </div>
-                    </div>
 
-                    <!-- Accordion item 5 -->
-                    <div class="card">
-                        <div id="headingFive" class="card-header bg-white shadow-sm border-0">
-                            <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" class="d-block position-relative collapsed text-dark collapsible-link py-2">ماذا لو نسيت اسم المستخدم / كلمة المرور لبرنامج مكافآت فزعه؟</a></h6>
-                        </div>
-                        <div id="collapseFive" aria-labelledby="headingFive" data-parent="#accordionExample" class="collapse">
-                            <div class="card-body">
-                                <p class="font-weight-light m-0">إذا كنت مسجلاً  كعضو في برنامج مكافآت فزعه ولا تتذكر كلمة المرور الخاصة بك، يمكنك إعادة تعيين كلمة مرور من خلال البريد الإلكتروني. إضغط على الرابط "نسيت كلمة المرور" واكتب عنوان بريدك الإلكتروني المستخدم وقت التسجيل. سيتم إرسال رابط لإعادة تعيين كلمة المرور.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Accordion item 6 -->
-                    <div class="card">
-                        <div id="headingSix" class="card-header bg-white shadow-sm border-0">
-                            <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" class="d-block position-relative collapsed text-dark collapsible-link py-2">أين يمكنني العثور على رقم عضويتي؟</a></h6>
-                        </div>
-                        <div id="collapseSix" aria-labelledby="headingSix" data-parent="#accordionExample" class="collapse">
-                            <div class="card-body">
-                                <p class="font-weight-light m-0">رقم عضويتك هو نفس رقم الهوية الاماراتية الخاص بك.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Accordion item 7 -->
-                    <div class="card">
-                        <div id="headingSeven" class="card-header bg-white shadow-sm border-0">
-                            <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven" class="d-block position-relative collapsed text-dark collapsible-link py-2">كيف يمكنني التسجيل في البرنامج؟</a></h6>
-                        </div>
-                        <div id="collapseSeven" aria-labelledby="headingSeven" data-parent="#accordionExample" class="collapse">
-                            <div class="card-body">
-                                <p class="font-weight-light m-0">هذه المرحلة الأولى من البرنامج وهي مخصصة لأعضاء فزعه فقط. يمكنك التسجيل إبتداءً من المرحلة القادمة.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Accordion item 8 -->
-                    <div class="card">
-                        <div id="headingEight" class="card-header bg-white shadow-sm border-0">
-                            <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight" class="d-block position-relative collapsed text-dark collapsible-link py-2">كيف يعمل برنامج مكافآت فزعه؟</a></h6>
-                        </div>
-                        <div id="collapseEight" aria-labelledby="headingEight" data-parent="#accordionExample" class="collapse">
-                            <div class="card-body">
-                                <p class="font-weight-light m-0">هو برنامج يهدف الى تعزيز ومكافئة الالتزام بالسلوكيات الإيجابية، عن طريق منح نقاط يمكن استبدالها بمنتجات من السوق الافتراضي.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Accordion item 9 -->
-                    <div class="card">
-                        <div id="headingNine" class="card-header bg-white shadow-sm border-0">
-                            <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine" class="d-block position-relative collapsed text-dark collapsible-link py-2">كيف يمكنني الحصول عن نقاط؟</a></h6>
-                        </div>
-                        <div id="collapseNine" aria-labelledby="headingNine" data-parent="#accordionExample" class="collapse">
-                            <div class="card-body">
-                                <p class="font-weight-light m-0">يتوجب على  المشارك اختيار الأهداف المراد تحقيقها. بعد تحقيق الهدف وإتمام الإنجاز يقوم البرنامج بمكافئة المشارك بنقاط.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Accordion item 10 -->
-                    <div class="card">
-                        <div id="headingTen" class="card-header bg-white shadow-sm border-0">
-                            <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen" class="d-block position-relative collapsed text-dark collapsible-link py-2">ما هي محاور برنامج فزعه للمكافآت؟</a></h6>
-                        </div>
-                        <div id="collapseTen" aria-labelledby="headingTen" data-parent="#accordionExample" class="collapse">
-                            <div class="card-body">
-                                <p class="font-weight-light m-0">المحاور الرئيسية الخمسة هي: الحياة الصحية، التغذية الصحية، التطوع، الإلتزام بالقوانين والتشريعات، إقتصاد المعرفة والتمكين.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Accordion item 11 -->
-                    <div class="card">
-                        <div id="headingEleven" class="card-header bg-white shadow-sm border-0">
-                            <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven" class="d-block position-relative collapsed text-dark collapsible-link py-2">أين يمكنني الحصول على التطبيق؟</a></h6>
-                        </div>
-                        <div id="collapseEleven" aria-labelledby="headingEleven" data-parent="#accordionExample" class="collapse">
-                            <div class="card-body">
-                                <p class="font-weight-light m-0">يمكنك تحميل التطبيق من الموقع أو آبل ستور أو جوجل بلاي.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Accordion item 12 -->
-                    <div class="card">
-                        <div id="headingTwelve" class="card-header bg-white shadow-sm border-0">
-                            <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve" class="d-block position-relative collapsed text-dark collapsible-link py-2">من يمكنه تحميل تطبيق فزعه للمكافآت؟</a></h6>
-                        </div>
-                        <div id="collapseTwelve" aria-labelledby="headingTwelve" data-parent="#accordionExample" class="collapse">
-                            <div class="card-body">
-                                <p class="font-weight-light m-0">التطبيق متاح للجميع، لكن فقط أعضاء فزعه يستطيعون استخدامه في المرحلة الاولى.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Accordion item 13 -->
-                    <div class="card">
-                        <div id="headingThirteen" class="card-header bg-white shadow-sm border-0">
-                            <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen" class="d-block position-relative collapsed text-dark collapsible-link py-2">أين يمكنني صرف النقاط التي تم جمعها؟</a></h6>
-                        </div>
-                        <div id="collapseThirteen" aria-labelledby="headingThirteen" data-parent="#accordionExample" class="collapse">
-                            <div class="card-body">
-                                <p class="font-weight-light m-0">يمكنك استبدال النقاط المكتسبة بما يعادلها من كوبونات في السوق الافتراضي.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Accordion item 14 -->
-                    <div class="card">
-                        <div id="headingFourteen" class="card-header bg-white shadow-sm border-0">
-                            <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen" class="d-block position-relative collapsed text-dark collapsible-link py-2">هل يمكنني الجمع بين بطاقة فزعه للخصومات والنقاط المكتسبة من برنامج فزعه للمكافآت؟</a></h6>
-                        </div>
-                        <div id="collapseFourteen" aria-labelledby="headingFourteen" data-parent="#accordionExample" class="collapse">
-                            <div class="card-body">
-                                <p class="font-weight-light m-0">نعم يمكنك الجمع بين العرضين لكن عدد النقاط سيكون أقل وحسب كل شريك.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Accordion item 15 -->
-                    <div class="card">
-                        <div id="headingFiveteen" class="card-header bg-white shadow-sm border-0">
-                            <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse" data-target="#collapseFiveteen" aria-expanded="false" aria-controls="collapseFiveteen" class="d-block position-relative collapsed text-dark collapsible-link py-2">أنا حالياً عضو في برنامج فزعه.  كيف يمكنني البدء باستخدام برنامج فزعه للمكافآت؟</a></h6>
-                        </div>
-                        <div id="collapseFiveteen" aria-labelledby="headingFiveteen" data-parent="#accordionExample" class="collapse">
-                            <div class="card-body">
-                                <p class="font-weight-light m-0">قم بتحميل تطبيق فزعه للمكافآت وتسجيل الدخول. من ثم قم باختيار الهدف المراد تحقيقه للبدء بالحصول على النقاط.</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

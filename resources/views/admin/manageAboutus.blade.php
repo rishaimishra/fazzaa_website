@@ -4,19 +4,21 @@
 
 
 <div class="content">
+    @if(Session::has('msg'))
+    <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('msg') }}</p>
+    @endif
 
     <div class="col-xl-6 ml-2">
-        <a href="{{route('page.reward')}}"><button class="btn btn-primary">Add New Record</button></a>
+        <a href="{{route('about.create')}}"><button class="btn btn-primary">Add New Record</button></a>
         </div>
-
 
     <!-- Start Content-->
     <div class="container-fluid">
-        <div class="col-xl-12">
+        <div class="col-xl-8">
             <div class="card">
                 <div class="card-body">
 
-                    <h4 class="header-title"> Manage Reward </h4>
+                    <h4 class="header-title"> Manage About Us </h4>
                     <div class="tab-pane ">
                         <select class="custom-select mb-3 styled-select slate" id='mySelector'>
                             <option selected>Select Language</option>
@@ -31,9 +33,8 @@
                                 <table class="table table-centered mb-0" id='myTable'>
                                     <thead>
                                         <tr>
-
+                                            <th>Image</th>
                                             <th id="title_header">Title</th>
-                                            <th>Description</th>
                                             <th>Status</th>
                                             <th>Action</th>
                                             <th>Language</th>
@@ -44,17 +45,16 @@
                                         @if(isset($data))
                                         @foreach($data as $row)
                                         <tr>
-
+                                            <td>
+                                                <img src="/{{$row->image}}" alt="image" class="img-fluid avatar-md">
+                                            </td>
                                             <td>{{$row->title}}</td>
-                                            <td>{{$row->description	}}</td>
                                             <td> <span class="badge badge-success badge-pill">Active</span></td>
                                             <td>
-                                                <a href="/panel/edit-rewards/{{$row->id}}" class="editpost"
-                                                    data-id="{{$row->id}}">
+                                                <a href="{{route('about.edit',$row->id)}}" class="editpost">
                                                     <span class="badge badge-primary badge-pill">Edit</span>
                                                 </a>
-                                                <a href="javascript: void(0);" class="deletepost"
-                                                    data-id="{{$row->id}}">
+                                                <a href="#" onclick="deleteAbout({{$row->id}})">
                                                     <span class="badge badge-warning badge-pill">Delete</span>
                                                 </a>
                                             </td>
@@ -83,15 +83,14 @@
 
 
 <script>
-    $(document).ready(function () {
+    function deleteAbout(id){
+             if(confirm('Are you sure you want to delete?')){
+                window.location.href='{{url('remove-about')}}/'+id;
+             }
+		  }
+	$(document).ready(function () {
 		  //your code here
-		  $('.deletepost').click(function(){
-		  	var id = $(this).data('id')
-		  	$.get('/panel/remove-rewards', {id:id}, function (data, textStatus, jqXHR) {
-			    alert(data.message)
-			     window.location.reload();
- 			});
-		  })
+
 		  var table = $('table');
 
 	$('#mySelector').change( function(){

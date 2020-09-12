@@ -12,18 +12,49 @@ use Response;
 class mediacenter extends Controller
 {
 	public function index(Request $r){
-    	$row = DB::table('news')
+
+        $data = DB::table('news')
     			->where('lang','en')
-    			->orderBy('created_at','desc')
-    			->get();
-    	return view('front.main')->with(["data" => $row]);
+                ->orderBy('created_at','desc')
+                ->get();
+
+
+                $rows = DB::table('rewards')
+    			->where('lang','en')
+                ->orderBy('created_at','desc')
+                ->get();
+
+                $faq = DB::table('faqs')
+    			->where('lang','en')
+                ->orderBy('created_at','desc')
+                ->get();
+
+                $init = DB::table('initiative')
+    			->where('lang','en')
+                ->orderBy('created_at','desc')
+                ->get();
+    	// return view('front.main')->with(["datas" => $data]);
+    	return view('front.main',compact(['data', 'rows','faq','init']));
     }
+
+
 	public function Arindex(Request $r){
-    	$row = DB::table('news')
+    	$data = DB::table('news')
     			->where('lang','ar')
     			->orderBy('created_at','desc')
-    			->get();
-    	return view('front.Armain')->with(["data" => $row]);
+                ->get();
+
+                $rows = DB::table('rewards')
+    			->where('lang','ar')
+                ->orderBy('created_at','desc')
+                ->get();
+
+                $faq = DB::table('faqs')
+    			->where('lang','ar')
+                ->orderBy('created_at','desc')
+                ->get();
+        // return view('front.Armain')->with(["data" => $row]);
+        return view('front.Armain',compact(['data', 'rows','faq']));
     }
 
     public function admin(Request $r){
@@ -102,17 +133,7 @@ class mediacenter extends Controller
 
 	 }
 
-	 public function Initiative(Request $r)
-     {
 
-     	$value = Cookie::get('user');
-     	if($value)
-			return view('admin.addInitiatives');
-
-       	return redirect('/signin');;
-
-
-     }
 
      public function addNews(Request $r)
      {
@@ -277,11 +298,232 @@ class mediacenter extends Controller
     }
 
 
-    public function RewardAdd(Request $r)
+    public function Rewards(Request $r)
      {
      	$value = Cookie::get('user');
      	if($value)
 			return view('admin.addReward');
+
+       	return redirect('/signin');;
+
+
+     }
+
+     public function addRewards(Request $r)
+     {
+
+     	 $validator = Validator::make($r->all(), [
+           'title' => 'required',
+           'description' => 'required',
+            	]);
+
+			if ($validator->fails()) {
+	            return Redirect::back()->withErrors($validator);
+
+	    	}else{
+
+		     	$data = [
+		     		'title' 	  => $r->title,
+		    		'description' => $r->description,
+		     		'created_at'  => time(),
+     				 'lang' 	  => $r->lang,
+		     		];
+
+		     	$post = DB::table('rewards')->insertGetId($data);
+		     	if($post == 1)
+		       		return  redirect()->back()->with('success', 'Your message has been sent successfully!');
+		       	else
+		    		return  redirect()->back()->with(['error' => 'Something Want Weong']);
+	    	}
+     }
+
+     public function manageRewards(Request $r){
+		$value = Cookie::get('user');
+     	if($value){
+	    	$row = DB::table('rewards')
+	    			->orderBy('created_at','desc')
+	    			->get();
+	    	return view('admin.manageReward')->with(["data" => $row]);
+     	}
+ 		return redirect('/signin');;
+
+    }
+
+    public function removeRewards(Request $r){
+    	$row = DB::table('rewards')
+    			->where("id",$r->id)
+    			->first();
+
+		$row = DB::table('rewards')
+    			->where("id",$r->id)
+    			->delete();
+    	return response()->json(["message" => "Rewards Removed"]);
+    }
+
+
+    public function EditRewards(Request $r,$id)
+    {
+        $value = Cookie::get('user');
+        if($value){
+            $row = DB::table('rewards')
+                    ->where("id",$id)
+                    ->first();
+
+           return view('admin.editReward')->with(["row" => $row]);;
+        }
+          return redirect('/signin');;
+
+    }
+
+
+    public function EditRewardsSave(Request $r)
+     {
+     	 $validator = Validator::make($r->all(), [
+           'title' => 'required',
+           'description' => 'required',
+
+            	]);
+
+			if ($validator->fails()) {
+	            return Redirect::back()->withErrors($validator);
+
+	    	}else{
+	    		if($r->title != ""){
+		     		$data = [
+		     		'title' 	  => $r->title,
+		    		'description' => $r->description,
+		     		'updated_at'  => time()
+		     		];
+	    		}
+
+		     	$post = DB::table('rewards')->where('id', $r->id)->update($data);
+		     	if($post == 1)
+		       		return  redirect()->back()->with('success', 'Your Post successfully! Edit');
+		       	else
+		    		return  redirect()->back()->with(['error' => 'Something Want Weong']);
+	    	}
+     }
+
+// jksahfkhasdf
+
+     public function Faqs(Request $r)
+     {
+     	$value = Cookie::get('user');
+     	if($value)
+			return view('admin.addFaq');
+
+       	return redirect('/signin');;
+
+
+     }
+
+     public function addFaqs(Request $r)
+     {
+
+
+     	 $validator = Validator::make($r->all(), [
+           'title' => 'required',
+           'description' => 'required',
+            	]);
+
+			if ($validator->fails()) {
+	            return Redirect::back()->withErrors($validator);
+
+	    	}else{
+
+		     	$data = [
+		     		'title' 	  => $r->title,
+		    		'description' => $r->description,
+		     		'created_at'  => time(),
+     				 'lang' 	  => $r->lang,
+		     		];
+
+		     	$post = DB::table('faqs')->insertGetId($data);
+		     	if($post == 1)
+		       		return  redirect()->back()->with('success', 'Your message has been sent successfully!');
+		       	else
+		    		return  redirect()->back()->with(['error' => 'Something Want Weong']);
+	    	}
+     }
+
+     public function manageFaqs(Request $r){
+		$value = Cookie::get('user');
+     	if($value){
+	    	$row = DB::table('faqs')
+	    			->orderBy('created_at','desc')
+	    			->get();
+	    	return view('admin.manageFaq')->with(["data" => $row]);
+     	}
+ 		return redirect('/signin');;
+
+    }
+
+    public function removeFaqs(Request $r){
+    	$row = DB::table('faqs')
+    			->where("id",$r->id)
+    			->first();
+
+		$row = DB::table('faqs')
+    			->where("id",$r->id)
+    			->delete();
+    	return response()->json(["message" => "Faq Removed"]);
+    }
+
+
+    public function EditFaqs(Request $r,$id)
+    {
+        $value = Cookie::get('user');
+        if($value){
+            $row = DB::table('faqs')
+                    ->where("id",$id)
+                    ->first();
+
+           return view('admin.editFaq')->with(["row" => $row]);;
+        }
+          return redirect('/signin');;
+
+    }
+
+
+    public function EditFaqsSave(Request $r)
+     {
+
+     	 $validator = Validator::make($r->all(), [
+           'title' => 'required',
+           'description' => 'required',
+
+            	]);
+
+			if ($validator->fails()) {
+	            return Redirect::back()->withErrors($validator);
+
+	    	}else{
+	    		if($r->title != ""){
+		     		$data = [
+		     		'title' 	  => $r->title,
+		    		'description' => $r->description,
+		     		'updated_at'  => time()
+		     		];
+	    		}
+
+		     	$post = DB::table('faqs')->where('id', $r->id)->update($data);
+		     	if($post == 1)
+		       		return  redirect()->back()->with('success', 'Your Post successfully! Edit');
+		       	else
+		    		return  redirect()->back()->with(['error' => 'Something Want Weong']);
+	    	}
+     }
+
+// jsadfkjhsdfklhlsd
+
+
+
+     public function Initiative(Request $r)
+     {
+
+     	$value = Cookie::get('user');
+     	if($value)
+			return view('admin.addInitiatives');
 
        	return redirect('/signin');;
 

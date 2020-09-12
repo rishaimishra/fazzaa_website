@@ -29,48 +29,48 @@
 
                         <li class="side-nav-title side-nav-item">Apps</li>
 
-                        <li class="side-nav-item">
+                        {{-- <li class="side-nav-item">
                             <a href="/panel/add-news" class="side-nav-link">
                                 <i class="uil-calender"></i>
                                 <span> Add News </span>
                             </a>
-                        </li>
+                        </li> --}}
                          <li class="side-nav-item">
                             <a href="/panel/manage-news" class="side-nav-link">
                                 <i class="uil-calender"></i>
                                 <span> Manage News </span>
                             </a>
                         </li>
-                        <li class="side-nav-item">
+                        {{-- <li class="side-nav-item">
                             <a href="/panel/add-About" class="side-nav-link">
                                 <i class="uil-calender"></i>
                                 <span> Add About Us </span>
                             </a>
-                        </li>
+                        </li> --}}
                          <li class="side-nav-item">
-                            <a href="/panel/manage-About" class="side-nav-link">
+                         <a href="{{route('page.about.read')}}" class="side-nav-link">
                                 <i class="uil-calender"></i>
                                 <span> Manage About Us </span>
                             </a>
                         </li>
-                        <li class="side-nav-item">
-                        <a href="{{route("page.initiative")}}" class="side-nav-link">
+                        {{-- <li class="side-nav-item">
+                        <a href="{{route("panel.create")}}" class="side-nav-link">
                                 <i class="uil-calender"></i>
                                 <span> Add Initiatives </span>
                             </a>
-                        </li>
+                        </li> --}}
                          <li class="side-nav-item">
-                            <a href="/panel/manage-Initiatives" class="side-nav-link">
+                         <a href="{{route('panel.index')}}" class="side-nav-link">
                                 <i class="uil-calender"></i>
                                 <span> Manage Initiatives </span>
                             </a>
                         </li>
-                        <li class="side-nav-item">
+                        {{-- <li class="side-nav-item">
                             <a href="/panel/add-Partner" class="side-nav-link">
                                 <i class="uil-calender"></i>
                                 <span> Add Partner </span>
                             </a>
-                        </li>
+                        </li> --}}
                          <li class="side-nav-item">
                             <a href="/panel/manage-Partner" class="side-nav-link">
                                 <i class="uil-calender"></i>
@@ -78,18 +78,49 @@
                             </a>
                         </li>
 
-                        <li class="side-nav-item">
+                        {{-- <li class="side-nav-item">
                         <a href="{{route('page.reward')}}" class="side-nav-link">
                                 <i class="uil-calender"></i>
                                 <span> Add Rewards </span>
                             </a>
-                        </li>
+                        </li> --}}
                          <li class="side-nav-item">
-                            <a href="/panel/manage-Partner" class="side-nav-link">
+                         <a href="{{route('manage.reward')}}" class="side-nav-link">
                                 <i class="uil-calender"></i>
                                 <span> Manage Rewards </span>
                             </a>
                         </li>
+
+                        {{-- <li class="side-nav-item">
+                            <a href="{{route('page.faqadd')}}" class="side-nav-link">
+                                    <i class="uil-calender"></i>
+                                    <span> Add Faqs </span>
+                                </a>
+                            </li> --}}
+                             <li class="side-nav-item">
+                             <a href="{{route('manage.faq')}}" class="side-nav-link">
+                                    <i class="uil-calender"></i>
+                                    <span> Manage Faqs </span>
+                                </a>
+                            </li>
+
+
+                            {{-- <li class="side-nav-item">
+                                <a href="{{route('about.create')}}" class="side-nav-link">
+                                        <i class="uil-calender"></i>
+                                        <span> Add AboutUs </span>
+                                    </a>
+                                </li> --}}
+
+
+                            {{-- <li class="side-nav-item">
+                             <a href="{{route('about.index')}}" class="side-nav-link">
+                                    <i class="uil-calender"></i>
+                                    <span> Manage AboutUs </span>
+                                </a>
+                            </li> --}}
+
+
                            <li class="side-nav-item">
                             <a href="/panel/manage-emails" class="side-nav-link">
                                 <i class="uil-calender"></i>

@@ -6,8 +6,9 @@
 <div class="content">
 
     <div class="col-xl-6 ml-2">
-        <a href="{{route('page.reward')}}"><button class="btn btn-primary">Add New Record</button></a>
+        <a href="{{route('page.faq')}}"><button class="btn btn-primary">Add New Record</button></a>
         </div>
+
 
 
     <!-- Start Content-->
@@ -16,7 +17,7 @@
             <div class="card">
                 <div class="card-body">
 
-                    <h4 class="header-title"> Manage Reward </h4>
+                    <h4 class="header-title"> Manage Faq </h4>
                     <div class="tab-pane ">
                         <select class="custom-select mb-3 styled-select slate" id='mySelector'>
                             <option selected>Select Language</option>
@@ -49,7 +50,7 @@
                                             <td>{{$row->description	}}</td>
                                             <td> <span class="badge badge-success badge-pill">Active</span></td>
                                             <td>
-                                                <a href="/panel/edit-rewards/{{$row->id}}" class="editpost"
+                                                <a href="/panel/edit-faqs/{{$row->id}}" class="editpost"
                                                     data-id="{{$row->id}}">
                                                     <span class="badge badge-primary badge-pill">Edit</span>
                                                 </a>
@@ -87,7 +88,7 @@
 		  //your code here
 		  $('.deletepost').click(function(){
 		  	var id = $(this).data('id')
-		  	$.get('/panel/remove-rewards', {id:id}, function (data, textStatus, jqXHR) {
+		  	$.get('/panel/remove-faqs', {id:id}, function (data, textStatus, jqXHR) {
 			    alert(data.message)
 			     window.location.reload();
  			});
