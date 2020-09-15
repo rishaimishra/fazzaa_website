@@ -53,6 +53,23 @@ Route::post('/panel/edit-faqs','mediacenter@EditFaqsSave');
 
 
 
+Route::get('/panel/add-partners','PartnerController@Partners')->name('page.partner');
+Route::post('/panel/add-partners','PartnerController@addPartners')->name('page.partner.add');
+Route::get('/panel/manage-partners','PartnerController@managePartners')->name('manage.partner');
+Route::get('/panel/remove-partners','PartnerController@removePartners');
+Route::get('/panel/edit-partners/{id}','PartnerController@EditPartners');
+Route::post('/panel/edit-partners','PartnerController@EditPartnerSave');
+
+
+
+Route::get('/panel/add-contact','ContactController@Contact')->name('page.contact');
+Route::post('/panel/add-contact','ContactController@addContact')->name('page.contact.add');
+Route::get('/panel/manage-contact','ContactController@manageContact')->name('manage.contact');
+Route::get('/panel/edit-contact/{id}','ContactController@EditContact');
+Route::post('/panel/edit-contact','ContactController@EditContactSave');
+
+
+
 Route::resource('/panel','InitiativeController');
 Route::post('/panel/edit-initiatives','InitiativeController@EditInitiativesSave');
 Route::get('remove-initiatives/{id}','InitiativeController@destroy');

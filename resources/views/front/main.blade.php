@@ -72,60 +72,39 @@
 
             <div class="row">
                 <h1>About</h1>
-                <div class="col-md-12 scrollPanel">
-                    <div class="row mb-3">
-                        <p>The National program for Behavioral Rewards - Fazaa <br /> <br /> The program falls under the
-                            umbrella of the Behavioral Rewards Department, which is considered one of the virtual unites
-                            at the Ministry of Possibilities that was launched by His Highness Sheikh Mohammed bin
-                            Rashid Al Maktoum, Vice President and Prime Minister and Ruler of Dubai, to represent the
-                            new generation of government practices focused on finding proactive and fundamental
-                            solutions to challenges, built on a pioneering developmental approach that was inspired by
-                            the UAE from the late HH Sheikh Zayed bin Sultan Al Nahyan, may God rest his soul, and the
-                            founding fathers, in building our country and setting it among the most advanced countries
-                            in the world.</p>
-                    </div>
-                    <div class="row mb-3">
-                        <p> The National Program for Behavioral Rewards – Fazaa is considered globally unique as it
-                            encom-passes rewarding offers for positive behavior, and investing productive capacities in
-                            the society and employing them within an institutional framework. Various segments of the
-                            society benefit from this program, from students, youths, families, the elderly, and people
-                            of determination, to businessmen, com-panies, and employees, by consolidating their
-                            posi-tive behavior through the launching of a set of initia-tives that motivates them to
-                            adopt it. The program focuses on the study of behavioral science and em-ploys specialized
-                            teams to conduct research and create innovative designs for governmental experi-ments based
-                            on which it will launch a set of special initiatives and innovative unconventional solutions
-                            that address the crucial challenges and harness all potentials, resources, and capacities to
-                            establish a more progressive and proactive thought for the fu-ture. The program operates
-                            with a framework of sev-eral major pillars related to the society, some of which are: </p>
+                @if(isset($about))
+                @foreach($about as $row)
+                @if($row->lang == "en")
 
+                <div class="col-md-12 scrollPanel">
+
+
+                    <div class="row mb-3">
+                        <p>{{$row->title}} <br /> <br /> {!! $row->description !!}</p>
                     </div>
+
+
+
                     <div class="row mb-3">
                         <ul class="d-lg-flex d-sm-none d-xs-none icons">
-                            <li><img class="img-fluid mb-3" src="img/about_01.jpg" alt="Healthy Life">
+                            <li><img class="img-fluid mb-3" src="{{$row->image}}" alt="Healthy Life">
                                 <h5>Healthy Life</h5>
                             </li>
-                            <li><img class="img-fluid mb-3" src="img/about_02.jpg" alt="Healthy Nutrition">
-                                <h5>Healthy Nutrition</h5>
-                            </li>
-                            <li><img class="img-fluid mb-3" src="img/about_03.jpg" alt="Volunteering">
-                                <h5>Volunteering</h5>
-                            </li>
-                            <li><img class="img-fluid mb-3" src="img/about_04.jpg"
-                                    alt="Compliance with laws & legislations">
-                                <h5>Compliance with laws &amp; legislations</h5>
-                            </li>
-                            <li><img class="img-fluid mb-3" src="img/about_05.jpg"
-                                    alt="Economy of Knowledge & Empowerment">
-                                <h5>Economy of Knowledge &amp; Empowerment</h5>
-                            </li>
+                           
                         </ul>
                     </div>
-                    <div class="row mb-3">
+                    {{-- <div class="row mb-3">
                         <p>All these pillars focus on highlighting the pioneering role of the Emirates in the field of
                             behavioral development and contributing to achieving the goals of the "Emirates Vision
                             2021".</p>
-                    </div>
+                    </div> --}}
+                    @endif
+                    @endforeach
+                    @endif
+
                 </div>
+
+
             </div>
 
         </div>
@@ -168,10 +147,10 @@
                 <div class="outerCover">
                     <div class="outerWrap">
                         <div class="imageBox">
-                        <a data-fancybox data-options='{"src": "#{{$row->id}}", "touch": false, "smallBtn" : false}'
+                            <a data-fancybox data-options='{"src": "#{{$row->id}}", "touch": false, "smallBtn" : false}'
                                 href="javascript:;">
                                 <div class="info">
-                                <p>{!!  substr(strip_tags($row->description), 0, 450) !!}</p>
+                                    <p>{!! substr(strip_tags($row->description), 0, 450) !!}</p>
                                     <span>know more</span>
                                 </div>
                             </a>
@@ -179,7 +158,7 @@
                         <!-- Modal -->
                         <div style="display:none;" id="{{$row->id}}">
                             <h2>{{$row->title}}</h2>
-                        <p>{!! $row->description !!}</p>
+                            <p>{!! $row->description !!}</p>
 
                         </div>
                     </div>
@@ -209,6 +188,10 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
+                        @if(isset($partner))
+                        @foreach($partner as $rows)
+                        @if($row->lang == "ar")
+
                         <div class="row">
                             <div class="col-md-4"><img class="d-block w-100" src="img/dept_logos/Central-Bank.jpg"
                                     alt="Central-Bank"></div>
@@ -217,16 +200,24 @@
                             <div class="col-md-4"><img class="d-block w-100" src="img/dept_logos/Dept-Community-Dev.jpg"
                                     alt="Dept-Community-Dev"></div>
                         </div>
-                        <div class="row">
+                        {{-- <div class="row">
                             <div class="col-md-4"><img class="d-block w-100" src="img/dept_logos/Dept-Economy.jpg"
                                     alt="Dept-Economy"></div>
                             <div class="col-md-4"><img class="d-block w-100" src="img/dept_logos/Dept-Education.jpg"
                                     alt="Dept-Education"></div>
                             <div class="col-md-4"><img class="d-block w-100" src="img/dept_logos/Dept-Emiratsation.jpg"
                                     alt="Dept-Emiratsation"></div>
-                        </div>
+                        </div> --}}
+
+                        @endif
+                        @endforeach
+                        @endif
                     </div>
                     <div class="carousel-item">
+
+                        @if(isset($partners))
+                        @foreach($partners as $rows)
+                        @if($row->lang == "ar")
                         <div class="row">
                             <div class="col-md-4"><img class="d-block w-100" src="img/dept_logos/Dept-Finance.jpg"
                                     alt="Dept-Finance"></div>
@@ -235,14 +226,19 @@
                             <div class="col-md-4"><img class="d-block w-100" src="img/dept_logos/Dept-Interior.jpg"
                                     alt="Dept-Interior"></div>
                         </div>
-                        <div class="row">
+                        {{-- <div class="row">
                             <div class="col-md-4"><img class="d-block w-100" src="img/dept_logos/Dept-National-Pgm.jpg"
                                     alt="Dept-Economy"></div>
                             <div class="col-md-4"><img class="d-block w-100"
                                     src="img/dept_logos/Federal-Demographic.jpg" alt="Dept-Education"></div>
                             <div class="col-md-4"><img class="d-block w-100" src="img/dept_logos/Youth-Councils.jpg"
                                     alt="DYouth-Councils"></div>
-                        </div>
+                        </div> --}}
+
+                        @endif
+                        @endforeach
+                        @endif
+
                     </div>
 
                 </div>
@@ -312,7 +308,8 @@
                             <div id="headingOne" class="card-header bg-white shadow-sm border-0">
                                 <h6 class="mb-0 font-weight-bold"><a href="#" data-toggle="collapse"
                                         data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
-                                        class="d-block position-relative text-dark collapsible-link py-2">{{$row->title}}</a></h6>
+                                        class="d-block position-relative text-dark collapsible-link py-2">{{$row->title}}</a>
+                                </h6>
                             </div>
                             <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample"
                                 class="collapse show">
@@ -327,7 +324,7 @@
 
 
 
-                      </div>
+                    </div>
                 </div>
             </div>
 
@@ -341,16 +338,20 @@
         <div class="container">
             <h1>Contact Us</h1>
 
+            @if(isset($contact))
+            @foreach($contact as $row)
+            @if($row->lang == "en")
+
             <div class="form-group row">
                 <div for="name" class="col-4 col-form-label">Phone:</div>
                 <div class="col-8">
-                    <p>600520003</p>
+                    <p>{{$row->phone}}</p>
                 </div>
             </div>
             <div class="form-group row">
                 <div for="contact" class="col-4 col-form-label">E-mail:</div>
                 <div class="col-8">
-                    <p><a href="mailto:abc@xyz.com">abc@xyz.com</a></p>
+                    <p><a href="mailto:abc@xyz.com">{{$row->email}}</a></p>
                 </div>
             </div>
             <div class="form-group row">
@@ -365,7 +366,7 @@
             <div class="form-group row">
                 <div class="col-4 col-form-label">Technical Support, phone:</div>
                 <div class="col-8">
-                    <p>90-909-09-0990</p>
+                    <p>{{$row->techsupport}}</p>
                 </div>
             </div>
             <div class="form-group row">
@@ -373,6 +374,11 @@
                     <p>For Further Support</p>
                 </div>
             </div>
+
+            @endif
+            @endforeach
+            @endif
+
 
             <h2 class="text-uppercase font-weight-bold pt-5 pb-5">Your suggestions and feedback are welcome</h2>
             <form method="get" action="/contact-query" id="contactForm1">

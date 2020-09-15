@@ -33,8 +33,32 @@ class mediacenter extends Controller
     			->where('lang','en')
                 ->orderBy('created_at','desc')
                 ->get();
+
+                $about = DB::table('abouts')
+    			->where('lang','en')
+                ->orderBy('created_at','desc')
+                ->get();
+
+
+                $partner = DB::table('partners')
+    			->where('lang','en')
+                ->orderBy('created_at','desc')
+                ->take(6)
+                ->get();
+
+                $partners = DB::table('partners')
+    			->where('lang','en')
+                ->orderBy('created_at','desc')
+                ->skip(6)
+                ->take(6)
+                ->get();
+
+                $contact = DB::table('contacts')
+    			->where('lang','en')
+                ->orderBy('created_at','desc')
+                ->get();
     	// return view('front.main')->with(["datas" => $data]);
-    	return view('front.main',compact(['data', 'rows','faq','init']));
+    	return view('front.main',compact(['data', 'rows','faq','init','about','contact','partner','partners']));
     }
 
 
@@ -53,8 +77,37 @@ class mediacenter extends Controller
     			->where('lang','ar')
                 ->orderBy('created_at','desc')
                 ->get();
+
+                $init = DB::table('initiative')
+    			->where('lang','ar')
+                ->orderBy('created_at','desc')
+                ->get();
+
+                $about = DB::table('abouts')
+    			->where('lang','ar')
+                ->orderBy('created_at','desc')
+                ->get();
+
+
+                $partner = DB::table('partners')
+    			->where('lang','ar')
+                ->orderBy('created_at','desc')
+                ->take(6)
+                ->get();
+
+                $partners = DB::table('partners')
+    			->where('lang','ar')
+                ->orderBy('created_at','desc')
+                ->skip(6)
+                ->take(6)
+                ->get();
+
+                $contact = DB::table('contacts')
+    			->where('lang','ar')
+                ->orderBy('created_at','desc')
+                ->get();
         // return view('front.Armain')->with(["data" => $row]);
-        return view('front.Armain',compact(['data', 'rows','faq']));
+        return view('front.Armain',compact(['data', 'rows','faq','init','about','contact','partner','partners']));
     }
 
     public function admin(Request $r){

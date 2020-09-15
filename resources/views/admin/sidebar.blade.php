@@ -71,8 +71,10 @@
                                 <span> Add Partner </span>
                             </a>
                         </li> --}}
-                         <li class="side-nav-item">
-                            <a href="/panel/manage-Partner" class="side-nav-link">
+
+
+                        <li class="side-nav-item">
+                        <a href="{{route('manage.partner')}}" class="side-nav-link">
                                 <i class="uil-calender"></i>
                                 <span> Manage Partner </span>
                             </a>
@@ -106,19 +108,19 @@
 
 
                             {{-- <li class="side-nav-item">
-                                <a href="{{route('about.create')}}" class="side-nav-link">
+                                <a href="{{route('page.contact')}}" class="side-nav-link">
                                         <i class="uil-calender"></i>
-                                        <span> Add AboutUs </span>
+                                        <span> Add Contact </span>
                                     </a>
                                 </li> --}}
 
 
-                            {{-- <li class="side-nav-item">
-                             <a href="{{route('about.index')}}" class="side-nav-link">
+                            <li class="side-nav-item">
+                             <a href="{{route('manage.contact')}}" class="side-nav-link">
                                     <i class="uil-calender"></i>
-                                    <span> Manage AboutUs </span>
+                                    <span> Manage Contact </span>
                                 </a>
-                            </li> --}}
+                            </li>
 
 
                            <li class="side-nav-item">
