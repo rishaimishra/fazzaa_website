@@ -53,12 +53,22 @@
                                 <span> Manage About Us </span>
                             </a>
                         </li>
-                        {{-- <li class="side-nav-item">
-                        <a href="{{route("panel.create")}}" class="side-nav-link">
+
+
+                        <li class="side-nav-item">
+                         <a href="{{route('manage.images')}}" class="side-nav-link">
                                 <i class="uil-calender"></i>
-                                <span> Add Initiatives </span>
+                                <span> Manage About Images </span>
+                            </a>
+                        </li>
+                        {{-- <li class="side-nav-item">
+                        <a href="{{route("page.images")}}" class="side-nav-link">
+                                <i class="uil-calender"></i>
+                                <span> Add about images </span>
                             </a>
                         </li> --}}
+
+
                          <li class="side-nav-item">
                          <a href="{{route('panel.index')}}" class="side-nav-link">
                                 <i class="uil-calender"></i>

@@ -87,17 +87,24 @@
 
                     <div class="row mb-3">
                         <ul class="d-lg-flex d-sm-none d-xs-none icons">
-                            <li><img class="img-fluid mb-3" src="{{$row->image}}" alt="Healthy Life">
-                                <h5>Healthy Life</h5>
+                            @if(isset($about_img))
+                @foreach($about_img as $roww)
+                @if($row->lang == "en")
+                            <li><img class="img-fluid mb-3" src="{{$roww->image}}" alt="Healthy Life">
+                                <h5>{{$roww->title}}</h5>
                             </li>
-                           
+                            @endif
+                            @endforeach
+                            @endif
+
                         </ul>
                     </div>
-                    {{-- <div class="row mb-3">
-                        <p>All these pillars focus on highlighting the pioneering role of the Emirates in the field of
-                            behavioral development and contributing to achieving the goals of the "Emirates Vision
-                            2021".</p>
-                    </div> --}}
+
+
+
+                    <div class="row mb-3">
+                        <p>{{$row->conclusion}}</p>
+                    </div>
                     @endif
                     @endforeach
                     @endif

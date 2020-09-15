@@ -25,7 +25,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box">
-                                     <h4 class="page-title">Add About Content</h4>
+                                     <h4 class="page-title">Add About us image</h4>
                                 </div>
                             </div>
                         </div>
@@ -45,11 +45,11 @@
                                     <div class="card-body">
 
 
-                                    <form method="post" action="{{route('about.store')}}">
+											<form method="post" >
 												@csrf
 											<div class="form-group">
 											    <label>Language</label>
-											    <select class="custom-select mb-3" name="lang" required>
+											    <select class="custom-select mb-3" name="lang">
 												    <option selected>Select Language</option>
 												    <option value="en">English</option>
 												    <option value="ar">Arabic</option>
@@ -60,23 +60,14 @@
 											    <input type="text" class="form-control" data-provide="typeahead" name="title" id="the-basics" placeholder="Basic Example">
 											</div>
 							               	<div class="form-group">
-											    <label>Description</label>
-                                            <div class="tab-pane show active" id="basic-preview">
-                                                <!-- basic summernote-->
-                                                <textarea id="summernote-basic" name="description"></textarea>
-                                            </div> <!-- end preview-->
-                                        	{{-- <div class="form-group">
+
+                                        	<div class="form-group">
 											    <label>Image</label>
 											    <input type="file" class="form-control" id="mypostdealimg"   placeholder="Add Image" />
                                     			<input type="hidden"class=" form-control" id="mypostdealimg1"  name="image" placeholder="Add Image" />
 											</div>
-                                            	<img src="" id="yourpostdealimg" style="height:180px; width:180px"  /> --}}
-                                             </div>
-
-                                             <div class="form-group">
-											    <label>Conclusion</label>
-											    <input type="text" class="form-control" data-provide="typeahead" name="conclusion" id="the-basics" placeholder="Basic Example">
-											</div>
+                                            	<img src="" id="yourpostdealimg" style="height:180px; width:180px"  />
+                                        	 </div>
                                         	 <button type="submit" class="btn btn-primary">submit</button>
 
                                              </form>

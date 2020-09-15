@@ -39,6 +39,11 @@ class mediacenter extends Controller
                 ->orderBy('created_at','desc')
                 ->get();
 
+                $about_img = DB::table('about_img')
+    			->where('lang','en')
+                ->orderBy('created_at','desc')
+                ->get();
+
 
                 $partner = DB::table('partners')
     			->where('lang','en')
@@ -58,7 +63,7 @@ class mediacenter extends Controller
                 ->orderBy('created_at','desc')
                 ->get();
     	// return view('front.main')->with(["datas" => $data]);
-    	return view('front.main',compact(['data', 'rows','faq','init','about','contact','partner','partners']));
+    	return view('front.main',compact(['data', 'rows','faq','init','about','contact','partner','partners','about_img']));
     }
 
 
@@ -88,6 +93,11 @@ class mediacenter extends Controller
                 ->orderBy('created_at','desc')
                 ->get();
 
+                $about_img = DB::table('about_img')
+    			->where('lang','en')
+                ->orderBy('created_at','desc')
+                ->get();
+
 
                 $partner = DB::table('partners')
     			->where('lang','ar')
@@ -107,7 +117,7 @@ class mediacenter extends Controller
                 ->orderBy('created_at','desc')
                 ->get();
         // return view('front.Armain')->with(["data" => $row]);
-        return view('front.Armain',compact(['data', 'rows','faq','init','about','contact','partner','partners']));
+        return view('front.Armain',compact(['data', 'rows','faq','init','about','contact','partner','partners','about_img']));
     }
 
     public function admin(Request $r){

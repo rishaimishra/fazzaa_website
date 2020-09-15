@@ -62,6 +62,15 @@ Route::post('/panel/edit-partners','PartnerController@EditPartnerSave');
 
 
 
+Route::get('/panel/add-images','AboutImageController@Images')->name('page.images');
+Route::post('/panel/add-images','AboutImageController@addImages')->name('page.images.add');
+Route::get('/panel/manage-images','AboutImageController@manageImages')->name('manage.images');
+Route::get('/panel/remove-images','AboutImageController@removeImages');
+Route::get('/panel/edit-images/{id}','AboutImageController@EditImages');
+Route::post('/panel/edit-images','AboutImageController@EditImagesave');
+
+
+
 Route::get('/panel/add-contact','ContactController@Contact')->name('page.contact');
 Route::post('/panel/add-contact','ContactController@addContact')->name('page.contact.add');
 Route::get('/panel/manage-contact','ContactController@manageContact')->name('manage.contact');

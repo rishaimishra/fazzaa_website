@@ -56,8 +56,9 @@ class AboutController extends Controller
 
         $validator = Validator::make($r->all(), [
             'title' => 'required',
+            'lang' => 'required',
             'description' => 'required',
-            'image' => 'required',
+
         ]);
 
         if ($validator->fails()) {
@@ -67,7 +68,7 @@ class AboutController extends Controller
             $data = [
                 'title'       => $r->title,
                 'description' => $r->description,
-                'image'       => save_image($r->image, $r->title),
+                'conclusion' => $r->conclusion,
                 'created_at'  => time(),
                 'lang'       => $r->lang,
             ];
@@ -133,6 +134,7 @@ class AboutController extends Controller
                 $data = [
                     'title'       => $r->title,
                     'description' => $r->description,
+                    'conclusion' => $r->conclusion,
                     'image'       => save_image($r->image, $r->title),
                     'updated_at'  => time()
                 ];
@@ -140,6 +142,7 @@ class AboutController extends Controller
                 $data = [
                     'title'       => $r->title,
                     'description' => $r->description,
+                    'conclusion' => $r->conclusion,
                     'updated_at'  => time()
                 ];
             }
